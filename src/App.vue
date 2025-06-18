@@ -1,7 +1,12 @@
 <script setup lang="ts">
-  import Title from './components/Title.vue'
+  import Locales from './components/Locales.vue'
+  import Navigation from "./components/Navigation.vue";
+  import './styles/main_page.scss'
 </script>
-
 <template>
-  <Title />
+  <div class="app">
+    <Locales />
+    <Navigation />
+    <RouterView />
+  </div>
 </template>
