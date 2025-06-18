@@ -1,0 +1,58 @@
+.app {
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  .title {
+    margin: 0;
+  }
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+}
+
+.locales {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  .element {
+    cursor: pointer;
+    position: relative;
+    color: blue;
+    padding: .3rem .5rem;
+    &:hover {
+      text-decoration: underline;
+      bottom: 2px;
+    }
+    &::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+      border-radius: 5px;
+    };
+    &.selected {
+      color: black;
+      &::after {
+        border: 1px solid black;
+      };
+    }
+  }
+}
+
+

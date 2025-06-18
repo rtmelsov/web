@@ -1,9 +1,10 @@
 <script setup lang="ts">
-  const title = 'test'
+  import {useLocaleStore} from "../stores/locale.ts";
+  const locale = useLocaleStore();
 </script>
 
 <template>
-  <div class="card">
-    <h1>{{title}}</h1>
+  <div class="header">
+    <h1 class="title">{{locale.translate('name')}}</h1>
   </div>
 </template>
